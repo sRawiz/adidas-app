@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/adiclub_screen.dart';
+import 'package:flutter_application_1/favourite_screen.dart';
 import 'package:flutter_application_1/home_screen.dart';
+import 'package:flutter_application_1/search_screen.dart';
+import 'package:flutter_application_1/shopping_screen.dart';
 
 class HomeScreenNavi extends StatefulWidget {
   const HomeScreenNavi({super.key});
@@ -13,7 +17,10 @@ class _MyWidgetState extends State<HomeScreenNavi> {
 
   final Map<int, Map<String, Widget>> _navigationMap = {
     0: {"title": const Text("Home"), "screen": HomeScreen()},
-
+    1: {"title": const Text("Search"), "screen": SearchScreen()},
+    2: {"title": const Text("Favourite"), "screen": FavouriteScreen()},
+    3: {"title": const Text("Cart"), "screen": ShoppingScreen()},
+    4: {"title": const Text("Adiclub"), "screen": AdiclubScreen()},
   };
 
   void onItemTapped(int index) {
